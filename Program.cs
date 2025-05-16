@@ -124,9 +124,9 @@ namespace SerialReceive
 
                 total += read;
                 double secs = sw.Elapsed.TotalSeconds;
-                double kbps = (total / 1024.0) / secs;
-                double mbps = kbps / 1024.0;
-                Console.Write($"\rRead: {total / 1024:N0} KB, {kbps:F0} KB/s, {mbps:F3} MB/s");
+                double kibps = (total / 1024.0) / secs;
+                double mibps = kibps / 1024.0;
+                Console.Write($"\rRead: {total / 1024:N0} KiB, {kibps:F0} KiB/s, {mibps:F3} MiB/s");
                 //if (count % 10 == 0)
                 //{
                 //    sampled_speeds.Add(mbps);
